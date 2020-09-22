@@ -15,3 +15,36 @@ ul {
   list-style: none;
   margin: 0;
 }
+.city-input {
+  width: 180px;
+  margin-left: 39px;
+  margin-right: 67px;
+  border-radius: 5px;
+}
+.search-input {
+  border-radius: 5px;
+}
+.city-heading {
+  font-size: 28px;
+  padding-top: 15px;
+}
+.weather-icon {
+  color: blue;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.temperature {
+  font-size: 58px;
+}
+.units {
+  position: relative;
+  top: -33px;
+}
+.weather-description {
+  margin-top: -11px;
+}
+h3 {
+  padding-top: 25px;
+  text-align: center;
+}
