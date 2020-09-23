@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/45d39ffe26.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>VanillaProject👩🏽‍💻</title>
   </head>
@@ -26,27 +27,29 @@
           <input class="search-input" type="submit" value="SEARCH" />
         </form>
         <ul>
-          <li class="city-heading">Pieštany</li>
-          <li>Tuesday, 14:44</li>
+          <li id="city" class="city-heading">Pieštany</li>
+          <li id="date">Tuesday, 14:44</li>
         </ul>
         <div class="row">
           <div class="col-6">
             <ul>
-              <li>
+              <li id="icon">
                 <span class="weather-icon"
                   ><i class="fas fa-cloud-sun"></i></span
-                ><span class="temperature"> 26</span
+                ><span id="temp" class="temperature"> 26</span
                 ><span class="units">°C|</span><a class="units" href="#">℉</a>
               </li>
-              <li class="weather-description">Partly cloudy</li>
+              <li id="description" class="weather-description">
+                Partly cloudy
+              </li>
             </ul>
           </div>
           <div class="col-6">
             <ul>
               <li>Sunrise: 06:35</li>
               <li>Sunset: 19:59</li>
-              <li>Humidity: 50%</li>
-              <li>Wind: 3/ms</li>
+              <li>Humidity: <span id="humidity">50</span>%</li>
+              <li>Wind: <span id="windSpeed">3</span> km/h</li>
             </ul>
           </div>
         </div>
