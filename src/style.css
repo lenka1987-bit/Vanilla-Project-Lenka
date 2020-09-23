@@ -27,6 +27,7 @@ ul {
 .city-heading {
   font-size: 28px;
   padding-top: 15px;
+  font-weight: 500;
 }
 .weather-icon {
   color: blue;
@@ -36,13 +37,16 @@ ul {
 
 .temperature {
   font-size: 58px;
+  margin-left: 14px;
 }
 .units {
   position: relative;
   top: -33px;
 }
 .weather-description {
-  margin-top: -11px;
+  margin-top: -5px;
+  margin-left: 28px;
+  text-transform: capitalize;
 }
 h3 {
   padding-top: 25px;
