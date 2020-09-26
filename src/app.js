@@ -22,6 +22,33 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatHours(timestamp) {
+  let time = new Date(timestamp);
+  let hours = time.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = time.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+/*
+function getIcon(icon) {
+     class = "";
+    if (icon === "01d") {
+        class = "fa-sun";
+    } else if (icon === "02d") {
+        class = "fa-cloud-sun";
+    } else if (icon === "03d" || icon === "04d") {
+        class = "fa-cloud";
+    } 
+ 
+    return class;
+}
+*/
+
 function showData(response) {
   console.log(response.data);
   let showTemperature = document.querySelector("#temp");
@@ -30,14 +57,17 @@ function showData(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#windSpeed");
   let date = document.querySelector("#date");
-  let iconElement = document.querySelector("#icon");
+  let sunrise = document.querySelector("#sunrise");
+  let sunset = document.querySelector("#sunset");
+
   showWeather.innerHTML = response.data.weather[0].description;
   showCity.innerHTML = response.data.name;
   showTemperature.innerHTML = Math.round(response.data.main.temp);
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed);
   date.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute("li", `http://openweathermap.org/img/wn/10d@2x.png`);
+  sunrise.innerHTML = formatHours(response.data.sys.sunrise * 1000);
+  sunset.innerHTML = formatHours(response.data.sys.sunset * 1000);
 }
 
 let apiKey = "64e05917145944cb1b0f8609f542a318";
