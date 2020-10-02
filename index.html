@@ -21,84 +21,59 @@
   </head>
   <body>
     <div class="container">
-      <div class="border-frame shadow p-3 mb-5 bg-white rounded">
-        <form>
-          <input class="city-input" type="text" placeholder="Type a city..." />
-          <input class="search-input" type="submit" value="SEARCH" />
+      <div class="border-frame">
+        <form id="search-engine">
+          <input
+            id="search-city"
+            class="city-input"
+            type="text"
+            placeholder="Type a city..."
+          />
+          <input
+            id="submit-input"
+            class="search-input"
+            type="submit"
+            value="SEARCH"
+          />
         </form>
         <ul>
           <li id="city" class="city-heading">Pieštany</li>
-          <li id="date">Tuesday, 14:44</li>
+          <li id="date"></li>
         </ul>
         <div class="row">
           <div class="col-6">
             <ul>
               <li>
-                <span id="current-weather-icon" class="weather-icon"
-                  ><i class="fas fa-cloud-sun"></i></span
-                ><span id="temp" class="temperature"> 26</span
-                ><span class="units">°C|</span><a class="units" href="#">℉</a>
+                <span id="current-weather-icon"
+                  ><img
+                    src=""
+                    alt="weather-icon"
+                    class="weather-icon"
+                    id="icon" /></span
+                ><span id="temp" class="temperature"></span
+                ><a id="celsius-unit" class="units celsius active" href="#"
+                  >°C|</a
+                ><a id="fahrenheit-unit" class="units fahrenheit" href="#">℉</a>
               </li>
-              <li id="description" class="weather-description">
-                Partly cloudy
-              </li>
+              <li id="description" class="weather-description"></li>
             </ul>
           </div>
           <div class="col-6">
-            <ul>
-              <li>Sunrise: <span id="sunrise">06:35</span></li>
-              <li>Sunset: <span id="sunset">19:59</span></li>
-              <li>Humidity: <span id="humidity">50</span>%</li>
-              <li>Wind: <span id="windSpeed">3</span> km/h</li>
+            <ul class="right-column">
+              <li>Sunrise: <span id="sunrise"></span></li>
+              <li>Sunset: <span id="sunset"></span></li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="windSpeed"></span> m/s</li>
             </ul>
           </div>
         </div>
-        <h3>Forecast for 5 next days:</h3>
+        <h3>3 HOURS FORECAST:</h3>
         <div class="forecast-frame">
-          <div class="row">
-            <div class="col-2">
-              <ul>
-                <li>WED</li>
-                <li><i class="fas fa-cloud"></i></li>
-                <li><strong>26℃</strong></li>
-                <li>16℃</li>
-              </ul>
-            </div>
-            <div class="col-2">
-              <ul>
-                <li>WED</li>
-                <li><i class="fas fa-cloud"></i></li>
-                <li><strong>26℃</strong></li>
-                <li>16℃</li>
-              </ul>
-            </div>
-            <div class="col-2">
-              <ul>
-                <li>WED</li>
-                <li><i class="fas fa-cloud"></i></li>
-                <li><strong>26℃</strong></li>
-                <li>16℃</li>
-              </ul>
-            </div>
-            <div class="col-2">
-              <ul>
-                <li>WED</li>
-                <li><i class="fas fa-cloud"></i></li>
-                <li><strong>26℃</strong></li>
-                <li>16℃</li>
-              </ul>
-            </div>
-            <div class="col-2">
-              <ul>
-                <li>WED</li>
-                <li><i class="fas fa-cloud"></i></li>
-                <li><strong>26℃</strong></li>
-                <li>16℃</li>
-              </ul>
-            </div>
-          </div>
+          <div class="row" id="forecast"></div>
         </div>
       </div>
+      </div>
+      <small><a href="#" target="_blank">open-source code</a> by Lenka Doubravova</small>
     </div>
     <script src="src/app.js"></script>
   </body>
